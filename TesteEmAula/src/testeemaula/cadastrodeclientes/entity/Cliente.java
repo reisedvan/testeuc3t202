@@ -9,6 +9,12 @@ public class Cliente {
     private String sobrenome;
     private Date data_nascimento;
 
+    public Cliente(String cpf, String nome, String sobrenome, Date data_nascimento) {
+        this.cpf = cpf;
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.data_nascimento = data_nascimento;
+    }    
     public String getCpf() {
         return cpf;
     }
@@ -39,6 +45,11 @@ public class Cliente {
 
     public void setData_nascimento(Date data_nascimento) {
         this.data_nascimento = data_nascimento;
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" + "cpf=" + cpf + ", nome=" + nome + ", sobrenome=" + sobrenome + ", data_nascimento=" + data_nascimento + '}';
     }
 
 }
